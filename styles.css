@@ -1,0 +1,154 @@
+body {
+    width: 50vw;
+    margin: 0 auto;
+    padding-top: 160px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.counters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.counter-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0090fe;
+}
+
+.input-container{
+    input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc
+}
+
+label {
+    font-size: small;
+ }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+button
+{
+    color: #f9f9f9;
+    background-color: #0090fe;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+h1, h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+
+.title{
+    font-style: italic;
+}
+.description {
+    font-style: italic;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    > * {
+        width: auto;
+    }
+
+.delete-button {
+    color: #f9f9f9;
+    background-color: #ef5350;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  .edit-button{
+    color: #f9f9f9;
+    background-color: #efec50;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  .complete-button{
+    color: #f9f9f9;
+    background-color: #4caf50;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+ } 
+}
+
+.task-item.completed .card {
+    background-color: #e8f5e8;
+    opacity: 0.7;
+}
+
+.task-item.completed .title,
+.task-item.completed .description {
+    text-decoration: line-through;
+    color: #666;
+}
+
+#list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
