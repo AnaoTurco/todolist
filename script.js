@@ -1,7 +1,6 @@
 const taskForm = document.getElementById("task-form");
 const taskList = document.getElementById("list");
 
-// Função para atualizar contadores na tela
 function updateCounters() {
   const totalTasks = getTaskCount();
   const completedTasks = getCompletedCount();
@@ -65,10 +64,10 @@ function incrementTaskCount() {
   return newCount;
 }
 
-// Nova função para decrementar o contador de tarefas
+
 function decrementTaskCount() {
   const currentCount = getTaskCount();
-  const newCount = Math.max(0, currentCount - 1); // Garante que não fica negativo
+  const newCount = Math.max(0, currentCount - 1); 
   localStorage.setItem('taskCount', newCount.toString());
   return newCount;
 }
@@ -85,10 +84,10 @@ function incrementCompletedCount() {
   return newCount;
 }
 
-// Nova função para decrementar o contador de tarefas concluídas
+
 function decrementCompletedCount() {
   const currentCount = getCompletedCount();
-  const newCount = Math.max(0, currentCount - 1); // Garante que não fica negativo
+  const newCount = Math.max(0, currentCount - 1);
   localStorage.setItem('completedCount', newCount.toString());
   return newCount;
 }
@@ -126,15 +125,14 @@ function createTaskElement(title, description, createdAt = null, completed = fal
   deleteButton.classList.add("delete-button");
 
   deleteButton.addEventListener("click", () => {
-    // Verifica se a tarefa estava concluída antes de excluir
+  
     const wasCompleted = taskItem.classList.contains("completed");
     
     taskItem.remove();
     
-    // Decrementa o contador total de tarefas
+    
     decrementTaskCount();
     
-    // Se a tarefa estava concluída, também decrementa o contador de concluídas
     if (wasCompleted) {
       decrementCompletedCount();
     }
@@ -173,11 +171,11 @@ function createTaskElement(title, description, createdAt = null, completed = fal
     if (taskItem.classList.contains("completed")) {
       taskItem.classList.remove("completed");
       completeButton.textContent = "Concluir";
-      decrementCompletedCount(); // Decrementa quando reabre uma tarefa
+      decrementCompletedCount(); 
     } else {
       taskItem.classList.add("completed");
       completeButton.textContent = "Reabrir";
-      incrementCompletedCount(); // Incrementa quando conclui uma tarefa
+      incrementCompletedCount(); 
     }
     saveTasks();
     updateCounters();
